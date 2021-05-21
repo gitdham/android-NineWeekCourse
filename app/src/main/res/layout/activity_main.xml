@@ -7,12 +7,59 @@
   tools:context=".MainActivity">
 
   <TextView
+    android:id="@+id/tvTitle"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Idham Adzani"
+    android:text="Enter your zipcode"
+    android:textSize="@dimen/title_text_height"
+    app:layout_constraintBottom_toTopOf="@+id/etZipcode"
+    app:layout_constraintEnd_toEndOf="@+id/etZipcode"
+    app:layout_constraintStart_toStartOf="@+id/etZipcode" />
+
+  <ImageView
+    android:id="@+id/ivIcon"
+    android:layout_width="@dimen/zipcode_entry_icon_size"
+    android:layout_height="@dimen/zipcode_entry_icon_size"
+    android:src="@drawable/ic_baseline_location_on_24"
+    app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+    app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+    app:layout_constraintStart_toStartOf="@+id/tvTitle" />
+
+  <EditText
+    android:id="@+id/etZipcode"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="Enter zipcode"
+    android:inputType="number"
+    android:textAlignment="center"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.498"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.183" />
+
+  <Button
+    android:id="@+id/btnSubmit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/colorBtn"
+    android:text="Submit Zipcode"
+    app:layout_constraintEnd_toEndOf="@+id/etZipcode"
+    app:layout_constraintStart_toStartOf="@+id/etZipcode"
+    app:layout_constraintTop_toBottomOf="@+id/etZipcode" />
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvForecastList"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/btnSubmit"
+    app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
